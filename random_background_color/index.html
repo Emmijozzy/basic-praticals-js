@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Bacground color</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: grid;
+            min-height: 100vh;
+            align-items: center;
+            justify-items: center;
+        }
+        .holder {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 35px;
+            text-transform: uppercase;
+            padding: 20px;
+        }
+        .caller {
+            background-color: black;
+            color: white;
+            padding: 5px 20px;
+            border: 0;
+            outline: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .value {
+            font-size: 45px;
+        }
+        .autochange {
+            padding: 5px 20px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            border: 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="holder">
+        <h1>this is hex color <span class="value"></span></h1>
+        <button class="caller">Change bg</button>
+        <button class="autochange"> Auto bg</button>
+    </div>
+    <script>
+        const body = document.querySelector('body');
+        const caller = document.querySelector('.caller');
+        let value = document.querySelector('.value');
+        const autoChange = document.querySelector('.autochange')
+
+        const colors = [1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'];
+        color = "#"
+
+        // logic
+        caller.addEventListener('click', () => {
+            if (color.length == 7) {
+                Window.clearInterval(inter)
+            }
+            for (let i = 0; i < 6; i++) {
+                let code = Math.floor(Math.random() * colors.length);
+                color +=  colors[code] 
+                // console.log(color)             
+            }
+            body.style.backgroundColor = color;
+            value.innerHTML = color;
+            color ="#"
+        })
+
+
+        let checker = 0;
+        let autoCaller = (e) => {
+            if (checker > 0) {
+                // console.log(checker)
+                return
+            }
+            checker++;
+            e.preventDefault()
+            caller.innerHTML = "Stop Auto bg";
+            // clearInterval(inter)
+            var inter = setInterval(() => {
+                for (let i = 0; i < 6; i++) {
+                    let code = Math.floor(Math.random() * colors.length);
+                    color +=  colors[code] 
+                    // console.log(color)             
+                }
+                body.style.backgroundColor = color;
+                value.innerHTML = color;
+                color ="#"
+            }, 1000)
+            // inter ? clearInterval(inter): color
+            
+            caller.addEventListener('click', () => {
+                clearInterval(inter)
+                caller.innerHTML = "Change bg" 
+                checker = 0;               
+            })
+        }
+        autoChange.addEventListener('click', autoCaller )
+    </script>
+</body>
+</html>
