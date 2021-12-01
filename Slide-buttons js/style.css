@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    font-size: 20px;
+    background: #cbcfed; 
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+    grid-gap: 100px 70px;
+    height: 100vh;
+    width: 100vw;
+    place-items: center;
+    place-content: center;
+    transform: translateX(-50px);
+}
+.slide-field {
+    position: relative;
+}
+[type = checkbox] {
+    position: absolute;
+    display: none;
+}
+input + label {
+    position : relative;
+    z-index: 3;
+}
+input + label > span {
+    color: white;
+    font-size: 0.8em;
+    font-weight: 700;
+}
+input + label .on {
+    position: absolute;
+    text-shadow: 1px 0px 10px  #031e37f5;
+    transform: translate(5px, 6px);
+    color: #041b31f5;
+    z-index: -1;
+}
+input + label .off {
+    position: absolute;
+    text-shadow: 0px 0px 10px  #cacfe7;
+    transform: translate(48px, 6px);
+    color: #a3a3bc;
+}
+input + label::before {
+    position: absolute;
+    content: '';
+    width: 75px;
+    height: 24px;
+    background: #cacae9;
+    border-radius: 10px;
+    z-index: -1;
+    padding: 2px 5px;
+    box-shadow: 1px 2px 5px rgba(7, 1, 28, 0.379), inset  0px 0px 5px #020202;
+    transition: background-color .4s ease-in;
+}
+input + label::after {
+    position: absolute;
+    content: '';
+    width: 34px;
+    height: 22px;
+    transform: translate(0px, 1px);
+    top: 0px;
+    background: #cacae9;
+    border-radius: 10px;
+    z-index: -1;
+    padding: 2px 5px;
+    transition: transform .5s ease-out;
+    box-shadow: inset 0px 0px 5px #18181ee0, 0px 0px 5px #02020234 ;
+}
+
+input:checked + label::after {
+    position: absolute;
+    content: '';
+    width: 34px;
+    height: 22px;
+    top: 0px;
+    background: #cacae9;
+    border-radius: 10px;
+    z-index: 22;
+    padding: 2px 5px;
+    transform: translate(40px, 1px);
+    box-shadow: inset 0px 0px 5px #18181e, 0px 1px 5px #0202028f ;
+
+}
+input:checked + label::before {
+    position: absolute;
+    content: '';
+    width: 75px;
+    height: 24px;
+    background: #7d7deb;
+    border-radius: 10px;
+    z-index: -1;
+    padding: 2px 5px;
+    box-shadow: 1px 1px 5px rgba(7, 1, 28, 0.616), inset  0px 0px 5px #020202;
+}
+.slide-field2 {
+    position: relative;
+}
+[id = togglebtn2 ] {
+    position: absolute;
+    display: none;
+}
+
+input + [for = togglebtn2] {
+    position: relative;
+    z-index: 3;
+}
+input + [for = togglebtn2]::before {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 30px;
+    border-radius: 25% 25% 25% 25%/ 50% 50% 50% 50%;
+}
+input + [for = togglebtn2]::after {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 35px;
+    border-radius: 50%;
+    transform: translateY(-2px);
+    transition: transform .5s ease-out;
+}
+input:checked + [for = togglebtn2]::before {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 30px;
+    background: #7d7deb;
+    border-radius: 25% 25% 25% 25%/ 50% 50% 50% 50%;
+    z-index: -1;
+    padding: 2px 5px;
+    box-shadow: 1px 1px 5px rgba(7, 1, 28, 0.616), inset  0px 0px 5px #020202;
+}
+    input:checked + [for = togglebtn2]::after {
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 35px;
+        border-radius: 50%;
+        transform: translate(30px,-2px);
+    }
+.slide-field3 {
+    position: relative;
+}
+[id = togglebtn3 ] {
+    position: absolute;
+    display: none;
+}
+
+input + [for = togglebtn3] {
+    position: relative;
+    z-index: 3;
+}
+input + [for = togglebtn3]::before {
+    position: absolute;
+    content: '';
+    width: 75px;
+    height: 30px;
+    border-radius: 20% 20% 20% 20%/ 50% 50% 50% 50%;
+}
+input + [for = togglebtn3]::after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 25px;
+    border-radius: 50%;
+    transform: translate(4px, 3px);
+    transition: transform .5s ease-out;
+}
+input:checked + [for = togglebtn3]::before {
+    position: absolute;
+    content: '';
+    width: 75px;
+    height: 30px;
+    background: #7d7deb;
+    border-radius: 20% 20% 20% 20%/ 50% 50% 50% 50%;
+    z-index: -1;
+    padding: 2px 5px;
+    box-shadow: 1px 1px 5px rgba(7, 1, 28, 0.616), inset  0px 0px 5px #020202;
+}
+    input:checked + [for = togglebtn3]::after {
+        transform: translate(50px,2px);
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 25px;
+        border-radius: 50%;
+    }
+.slide-field4 {
+    position: relative;
+}
+[id = togglebtn4 ] {
+    position: absolute;
+    display: none;
+}
+
+input + [for = togglebtn4] {
+    position: relative;
+    z-index: 3;
+}
+input + [for = togglebtn4]::before {
+    position: absolute;
+    content: '';
+    width: 75px;
+    height: 20px;
+    border-radius: 15% 15% 15% 15%/ 50% 50% 50% 50%;
+}
+input + [for = togglebtn4]::after {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 35px;
+    border-radius: 50%;
+    transform: translate(-1px, -7px);
+    transition: transform .5s ease-out;
+}
+input:checked + [for = togglebtn4]::before {
+    position: absolute;
+    content: '';
+    width: 75px;
+    height: 20px;
+    background: #7d7deb;
+    border-radius: 15% 15% 15% 15%/ 50% 50% 50% 50%;
+    z-index: -1;
+    padding: 2px 5px;
+    box-shadow: 1px 1px 5px rgba(7, 1, 28, 0.616), inset  0px 0px 5px #020202;
+}
+    input:checked + [for = togglebtn4]::after {
+        transform: translate(50px,-7px);
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 35px;
+        border-radius: 50%;
+    }
+.slide-field5 {
+    position: relative;
+}
+[id = togglebtn5 ] {
+    position: absolute;
+    display: none;
+}
+
+input + [for = togglebtn5] {
+    position: relative;
+    z-index: 3;
+}
+input + [for = togglebtn5]::before {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 0.5px;
+    border-radius: 20px;
+}
+input + [for = togglebtn5]::after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 25px;
+    border-radius: 50%;
+    transform: translate(-2px, -11px);
+    transition: transform .5s ease-out;
+}
+input:checked + [for = togglebtn5]::before {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 0.5px;
+    background: #7d7deb;
+    border-radius: 20px;
+    z-index: -1;
+    padding: 2px 5px;
+    box-shadow: 1px 1px 5px rgba(7, 1, 28, 0.616), inset  0px 0px 5px #020202;
+}
+    input:checked + [for = togglebtn5]::after {
+        transform: translate(50px,-11px);
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 25px;
+        border-radius: 50%;
+    }
+.slide-field6 {
+    position: relative;
+}
+[id = togglebtn6 ] {
+    position: absolute;
+    display: none;
+}
+
+input + [for = togglebtn6] {
+    position: relative;
+    z-index: 3;
+}
+input + [for = togglebtn6]::before {
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 25px;
+    border-radius: 20px;
+    background: none;
+    border: 2px solid #31313e;
+}
+input + [for = togglebtn6]::after {
+    background: #31313e;
+    position: absolute;
+    content: '';
+    width: 19px;
+    height: 23px;
+    border-radius: 50%;
+    transform: translate(4px, 3px);
+    transition: transform .5s ease-out;
+}
+input:checked + [for = togglebtn6]::before {
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 25px;
+    background: #7d7deb;
+    border-radius: 20px;
+    z-index: -1;
+    padding: 2px 5px;
+    box-shadow: 1px 1px 5px rgba(7, 1, 28, 0.616), inset  0px 0px 5px #020202;
+}
+    input:checked + [for = togglebtn6]::after {
+        background: #31313e;
+        transform: translate(50px, 3px);
+        position: absolute;
+        content: '';
+        width: 19px;
+        height: 23px;
+        border-radius: 50%;
+    }
+.slide-field7 {
+    position: relative;
+}
+[id = togglebtn7 ] {
+    position: absolute;
+    display: none;
+}
+input + label .off7 {
+    position: absolute;
+    color: #31313e;
+    font-size: 15px;
+    transform: translate(40px, 7px);
+}
+input:checked + label .off7 {
+    display: none;
+}
+input + label .on7 {
+    transform: translate(10px, 7px);
+    position: absolute;
+    color: #31313e;
+    font-size: 15px;
+}
+input + [for = togglebtn7] {
+    position: relative;
+    z-index: 3;
+}
+input + [for = togglebtn7]::before {
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 25px;
+    border-radius: 20px;
+    background: none;
+    border: 2px solid #31313e;
+}
+input + [for = togglebtn7]::after {
+    background: #31313e;
+    position: absolute;
+    content: '';
+    width: 19px;
+    height: 23px;
+    border-radius: 50%;
+    transform: translate(4px, 3px);
+    transition: transform .5s ease-out;
+}
+input:checked + [for = togglebtn7]::before {
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 25px;
+    background: #7d7deb;
+    border-radius: 20px;
+    z-index: -1;
+    padding: 2px 5px;
+    box-shadow: 1px 1px 5px rgba(7, 1, 28, 0.616), inset  0px 0px 5px #020202;
+}
+    input:checked + [for = togglebtn7]::after {
+        background: #31313e;
+        transform: translate(50px, 2px);
+        position: absolute;
+        content: '';
+        width: 19px;
+        height: 24px;
+        border-radius: 50%;
+    }
+.slide-field8 {
+    position: relative;
+}
+[id = togglebtn8 ] {
+    position: absolute;
+    display: none;
+}
+input + [for = togglebtn8] {
+    position: relative;
+    z-index: 3;
+}
+input + [for = togglebtn8]::before {
+    position: absolute;
+    content: '';
+    width: 85px;
+    height: 35px;
+    border-radius: 10px;
+    background: none;
+}
+input + [for = togglebtn8]::after {
+    background: #31313e;
+    position: absolute;
+    content: '';
+    width: 45px;
+    height: 38px;
+    border-radius: 10px;
+    transform: translate(-2px, -2px);
+    transition: transform .5s ease-out;
+}
+input:checked + [for = togglebtn8]::before {
+    position: absolute;
+    content: '';
+    width: 85px;
+    height: 35px;
+    background: #7d7deb;
+    border-radius: 10px;
+    z-index: -1;
+    padding: 2px 5px;
+    box-shadow: 1px 1px 5px rgba(7, 1, 28, 0.616), inset  0px 0px 5px #020202;
+}
+    input:checked + [for = togglebtn8]::after {
+        background: #31313e;
+        transform: translate(50px, -2px);
+        position: absolute;
+        content: '';
+        width: 45px;
+        height: 38px;
+        border-radius: 10%;
+    }
+.slide-field9 {
+    position: relative;
+}
+[id = togglebtn9 ] {
+    position: absolute;
+    display: none;
+}
+input + label .off9 {
+    position: absolute;
+    color: #31313e;
+    font-size: 12px;
+    transform: translate(50px, 10px);
+}
+input:checked + label .off9 {
+    display: none;
+}
+input + label .on9 {
+    transform: translate(10px, 10px);
+    position: absolute;
+    color: #31313e;
+    font-size: 12px;
+}
+input + [for = togglebtn9] {
+    position: relative;
+    z-index: 3;
+}
+input + [for = togglebtn9]::before {
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 25px;
+    border-radius: 2px;
+    background: none;
+    border: 2px solid #31313e;
+}
+input + [for = togglebtn9]::after {
+    background: #31313e;
+    position: absolute;
+    content: '';
+    width: 19px;
+    height: 26px;
+    border-radius: 5%;
+    transform: translate(1px, 2px);
+    transition: transform .5s ease-out;
+}
+input:checked + [for = togglebtn9]::before {
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 25px;
+    background: #7d7deb;
+    border-radius: 2px;
+    z-index: -1;
+    padding: 2px 5px;
+    box-shadow: 1px 1px 5px rgba(7, 1, 28, 0.616), inset  0px 0px 5px #020202;
+}
+    input:checked + [for = togglebtn9]::after {
+        background: #31313e;
+        transform: translate(53px, 2px);
+        position: absolute;
+        content: '';
+        width: 19px;
+        height: 24px;
+        border-radius: 5%;
+    }
