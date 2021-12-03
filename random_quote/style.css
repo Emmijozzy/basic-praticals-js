@@ -68,7 +68,7 @@ body {
 
 @media(max-width: 900px) {
     .qoute-field .inner-qoute {
-        font-size: 0.9rem;
+        font-size: 1rem;
         line-height: 0px;
         background: #94b2de1a;
     }   
