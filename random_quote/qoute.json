@@ -1,4 +1,4 @@
-"[
+[
     {
         "quote" : "We are what we repeatedly do . Excellence, therefore, is not an act but a habit.",
         "author" : "Aristotle"
@@ -12,12 +12,11 @@
         "author" : "Mahatma Gandhi"
     },
     {
-        "qoute" : "I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not
-        feel afraid, but he who conquers that fear.",
+        "quote" : "I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear.",
         "author" : "Nelson Mandela"
-    }
+    },
     {
-        "My favourite things in life don't cost any money. It's really clear that the most precic resource we all have is time.",
+        "quote" : "My favourite things in life don't cost any money. It's really clear that the most precic resource we all have is time.",
         "author" : "Steve jobs"
     },
     {
@@ -25,12 +24,11 @@
         "authors" : "Albert Einstein"
     },
     {
-        "qoute" : "Develop success from failures. Discouragement and failure are two of the surest stepping stone to success.",
+        "quote" : "Develop success from failures. Discouragement and failure are two of the surest stepping stone to success.",
         "author" : "Dale Carnegie"
     },
     {
-        "qoute" : "Success is peace of mind, which is a direct result of self-satisfaction i knowing you made
-        the effort to become the best of which you are capeble.",
+        "quote" : "Success is peace of mind, which is a direct result of self-satisfaction i knowing you madethe effort to become the best of which you are capeble.",
         "author" : "John Wooden"
     },
     {
@@ -38,7 +36,7 @@
         "author" : "Winson Churchill"
     },
     {
-        "qoute" : "When we strive to become etter than we are, everything around us becomes better too.",
+        "quote" : "When we strive to become etter than we are, everything around us becomes better too.",
         "author" : "Paulo Coelho"
     }
-]"
+]
