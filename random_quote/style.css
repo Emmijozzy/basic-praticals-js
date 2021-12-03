@@ -22,8 +22,8 @@ body {
     /* text-align: center; */
 }
 .qoute-field {
-    width:70vw ;
-    height: 40vh;
+    width: 70vw;
+    height: 20rem;
     background: #fff;
     display: grid;
     grid-template-rows: 1fr auto auto;
@@ -32,10 +32,10 @@ body {
     border-left: 10px solid #e93e93;
     border-radius: 20px;
     box-shadow: 1px 2px 10px #ccc;
-    box-sizing: content-box;
+    /* box-sizing: content-box; */
 }
 .qoute-field .inner-qoute {
-    font-size: 20px;
+    font-size: 30px;
     background: #94b2de1a;
 }
 .qoute-field .qouteblock {
@@ -62,6 +62,21 @@ body {
     box-shadow: 1px 1px 10px #e93e93;
 }
 
+@media(max-width: 850px) {
+    .qoute-field .inner-qoute {
+        font-size: 0.9rem;
+        line-height: 0px;
+        background: #94b2de1a;
+    }   
+    .qoute-field .qouteblock {
+        font-size: 18px;
+        font-style: italic;
+        color:#e93e93
+    }
+    .qoute-field #author {
+        font-size: 1rem;
+    }
+}
 @media(max-width: 480px) {
     .qoute-field .inner-qoute {
         font-size: 0.9rem;
