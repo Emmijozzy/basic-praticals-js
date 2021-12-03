@@ -1,0 +1,57 @@
+let qoutes = [
+    {
+        "quote" : "We are what we repeatedly do . Excellence, therefore, is not an act but a habit.",
+        "author" : "Aristotle"
+    },
+    {
+        "quote" : "Reality is created by our mind; we can change our reality by changing our mind.",
+        "author" : "Plato"
+    },
+    {
+        "quote" : "Live as if you are to die tomorrow. Learn as if you were to live forever.",
+        "author" : "Mahatma Gandhi"
+    },
+    {
+        "quote" : "I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear.",
+        "author" : "Nelson Mandela"
+    },
+    {
+        "quote" : "My favourite things in life don't cost any money. It's really clear that the most precic resource we all have is time.",
+        "author" : "Steve jobs"
+    },
+    {
+        "quote" : "The person who never made a mistake never made any thing new.",
+        "author" : "Albert Einstein"
+    },
+    {
+        "quote" : "Develop success from failures. Discouragement and failure are two of the surest stepping stone to success.",
+        "author" : "Dale Carnegie"
+    },
+    {
+        "quote" : "Success is peace of mind, which is a direct result of self-satisfaction i knowing you madethe effort to become the best of which you are capeble.",
+        "author" : "John Wooden"
+    },
+    {
+        "quote" : "The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+        "author" : "Winson Churchill"
+    },
+    {
+        "quote" : "When we strive to become etter than we are, everything around us becomes better too.",
+        "author" : "Paulo Coelho"
+    }
+] 
+
+const btn = document.querySelector('#btn');
+const qoute = document.querySelector('.inner-qoute');
+const author = document.querySelector('#author');
+
+// event listener
+btn.addEventListener('click', getQuote);
+
+function getQuote() {
+    let random = Math.floor(Math.random() * qoutes.length);
+    // console.log(random);
+    qoute.innerHTML = `${qoutes[random].quote}`;
+    // qoute.innerHTML = '<span>"</span>' + qoutes[random].quote;
+    author.innerHTML = `<span>--</span> ${qoutes[random].author}`
+}
