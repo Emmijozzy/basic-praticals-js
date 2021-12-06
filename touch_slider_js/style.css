@@ -24,7 +24,7 @@ body {
     /* transform: translateX(-1950px); */
     user-select: none;
     cursor: grab;
-    transition: transform .4s ease-out;
+    transition: transform .8s ease-out;
 }
 img {
     width: 600px;
@@ -505,9 +505,9 @@ img {
     }
 
 }
-.grapping {
+.grabbing {
     cursor: grabbing;
 }
-.grapping .slide {
+.grabbing .slide {
     transform: scale(0.9);
 }
