@@ -47,6 +47,7 @@ function touchStart(index) {
 
     // https://css-tricks.com/using-requestanimationframe/
     slider.classList.add('grabbing')
+
   }
 }
 
@@ -58,9 +59,9 @@ function touchEnd() {
   const movedBy = currentTranslate - prevTranslate
   // console.log("move", movedBy)
   
-  if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex += 1
+  if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex ++
   
-  if (movedBy > 100 && currentIndex > 0) currentIndex -= 1
+  if (movedBy > 100 && currentIndex > 0) currentIndex --
   
   setPositionByIndex()
   
@@ -70,7 +71,7 @@ function touchEnd() {
 function touchMove(event) {
   if (isDragging) {
     const currentPosition = getPositionX(event)
-    // console.log(currentPosition)
+
     currentTranslate = prevTranslate + currentPosition - startPos
   }
 }
@@ -80,11 +81,8 @@ function getPositionX(event) {
 }
 
 function animation() {
-  setSliderPosition()
-  console.log('woking anima')
-    
+  setSliderPosition()    
   if (isDragging) /*requestAnimationFrame(animation)*/animationID = requestAnimationFrame(animation)
-  // console.log('working')
 }
 
 function setSliderPosition() {
