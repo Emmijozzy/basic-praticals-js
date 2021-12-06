@@ -99,7 +99,7 @@ img {
     position: relative;
     width: 150px;
     height: 150px;
-    -webkit-box-reflect: left 210px linear-gradient(transparent, #08041a52);
+    -webkit-box-reflect: left 50px linear-gradient(transparent, #08041a52);
     grid-row: 1/-1;
     grid-column: 1/-1;
 }
@@ -171,7 +171,7 @@ img {
     position: relative;
     width: 200px;
     height: 200px;
-    -webkit-box-reflect: left 150px  linear-gradient(transparent, #08041a71);
+    -webkit-box-reflect: left 60px  linear-gradient(transparent, #08041a71);
     grid-row: 1/-1;
     grid-column: 1/-1;
 }
@@ -243,7 +243,7 @@ img {
     position: relative;
     width: 180px;
     height: 180px;
-    -webkit-box-reflect: left 190px  linear-gradient(transparent, #08041a52, #00000000);
+    -webkit-box-reflect: left 90px  linear-gradient(transparent, #08041a52, #00000000);
     grid-row: 1/-1;
     grid-column: 1/-1;
 }
@@ -331,7 +331,7 @@ img {
     position: relative;
     width: 180px;
     height: 180px;
-    -webkit-box-reflect: left 190px  linear-gradient(transparent, #08041a52, #00000000);
+    -webkit-box-reflect: left 90px  linear-gradient(transparent, #08041a52, #00000000);
     grid-row: 1/-1;
     grid-column: 1/-1;
 }
