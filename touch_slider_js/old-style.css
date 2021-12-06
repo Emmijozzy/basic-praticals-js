@@ -1,0 +1,12 @@
+
+.slide-container {
+    display: inline-flex;
+    height: 60vh;
+    /* width:  100%; */
+    place-items: center;
+    overflow: hidden;
+}
+
+
+
+

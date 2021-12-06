@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #dde9f0;
+    width: 100%;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    /* align-content: center; */
+    align-items: center;
+    justify-items: center;
+    overflow-x: hidden;
+}
+.slide-container {
+    margin-top: 5rem;
+    height: 40vh;
+    display: flex;
+    place-items: center;    
+    background-color: #42433fd3;
+    position: relative;
+    /* transform: translateX(-1950px); */
+}
+img {
+    width: 600px;
+}
+.slide {
+    height: 30vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 10rem) 1fr;
+    grid-template-rows: repeat(auto-fit, 33%);
+}
+ .slide1 {
+    background: linear-gradient(to right, #eec717, #f1faa1d3);
+    border: 3px solid #eec717;
+    padding: 30px 20px 10px 10px; 
+    width: 100vw;
+
+} 
+
+.slide1 .name {
+    grid-column: span 2; 
+    font-size: 2rem;
+    justify-self: center;
+    align-self: center;
+    color: #463a08;
+    text-shadow: 0px 0px 6px rgba(9, 12, 2, 0.527) ;
+    padding: 0;
+    margin: 0;
+}
+.slide1 .price {
+    /* grid-area: price; */
+    grid-row: 2;
+    grid-column: span 2;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5rem;
+
+}
+.btn {
+    background: #463a08;
+    color: #fff;
+    text-decoration: none;
+    /* border: 0; */
+    /* outline: 0; */
+    padding: 0.2rem 2rem;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.btn:hover {
+    background: #fff;
+    color: #463a08;
+}
+
+.slide1 .buy {
+    grid-column: 1;
+    grid-row: 3;
+    place-self: center;
+}
+.slide1 .sell {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+}
+.img-holder {
+    position: relative;
+    grid-row: span 3;
+    grid-column: 3 ;
+    display: grid;
+    align-self: start;
+    justify-self: end;
+}
+.slide1 #img1 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    -webkit-box-reflect: left 210px linear-gradient(transparent, #08041a52);
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+}
+ .slide2 {
+    background: linear-gradient(to right, #82817d, #ecececd3);
+    border: 3px solid #82817d;
+    padding: 30px 20px 10px 10px; 
+    width: 100vw;
+
+} 
+
+.slide2 .name {
+    grid-column: span 2; 
+    font-size: 2rem;
+    justify-self: center;
+    align-self: center;
+    color: #302f30;
+    text-shadow: 0px 0px 6px rgba(9, 12, 2, 0.527) ;
+    padding: 0;
+    margin: 0;
+}
+.slide2 .price {
+    /* grid-area: price; */
+    grid-row: 2;
+    grid-column: span 2;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5rem;
+
+}
+.btn2 {
+    background: #302f30;
+    color: #fff;
+    text-decoration: none;
+    /* border: 0; */
+    /* outline: 0; */
+    padding: 0.2rem 2rem;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.btn2:hover {
+    background: #fff;
+    color: #302f30;
+}
+
+.slide2 .buy {
+    grid-column: 1;
+    grid-row: 3;
+    place-self: center;
+}
+.slide2 .sell {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+}
+.img-holder2 {
+    position: relative;
+    grid-row: span 3;
+    grid-column: 3 ;
+    display: grid;
+    align-self: start;
+    justify-self: end;
+    transform: translateY(-20px);
+
+}
+.slide2 #img1 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    -webkit-box-reflect: left 150px  linear-gradient(transparent, #08041a71);
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+}
+ .slide3 {
+    background: linear-gradient(to right, #00aeef, #ecececd3);
+    border: 3px solid #00aeef;
+    padding: 30px 20px 10px 10px; 
+    width: 100vw;
+
+} 
+
+.slide3 .name {
+    grid-column: span 2; 
+    font-size: 2rem;
+    justify-self: center;
+    align-self: center;
+    color: #553a9e;
+    text-shadow: 0px 0px 6px rgba(9, 12, 2, 0.527) ;
+    padding: 0;
+    margin: 0;
+}
+.slide3 .price {
+    /* grid-area: price; */
+    grid-row: 2;
+    grid-column: span 2;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5rem;
+
+}
+.btn3 {
+    background: #553a9e;
+    color: #fff;
+    text-decoration: none;
+    /* border: 0; */
+    /* outline: 0; */
+    padding: 0.2rem 2rem;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.btn3:hover {
+    background: #fff;
+    color: #553a9e;
+}
+
+.slide3 .buy {
+    grid-column: 1;
+    grid-row: 3;
+    place-self: center;
+}
+.slide3 .sell {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+}
+.img-holder3 {
+    position: relative;
+    grid-row: span 3;
+    grid-column: 3 ;
+    display: grid;
+    align-self: start;
+    justify-self: end;
+    transform: translateY(-20px);
+
+}
+.slide3 #img1 {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    -webkit-box-reflect: left 190px  linear-gradient(transparent, #08041a52, #00000000);
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+}
+.slide-indicator {
+    position: absolute;
+    width: 100vw;
+    height: 3rem;
+    z-index: 32;
+    transform: translate(0px, 135px);
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+.indicator {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+}
+ .slide4 {
+    background: linear-gradient(to right, #cdae20, #ecececd3);
+    border: 3px solid #cdae20;
+    padding: 30px 20px 10px 10px; 
+    width: 100vw;
+
+} 
+
+.slide4 .name {
+    grid-column: span 2; 
+    font-size: 2rem;
+    justify-self: center;
+    align-self: center;
+    color: #f1bf29;
+    text-shadow: 0px 0px 6px rgba(180, 150, 18, 0.527) ;
+    padding: 0;
+    margin: 0;
+}
+.slide4 .price {
+    /* grid-area: price; */
+    grid-row: 2;
+    grid-column: span 2;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5rem;
+
+}
+.btn4 {
+    background: #f1bf29;
+    color: #fff;
+    text-decoration: none;
+    /* border: 0; */
+    /* outline: 0; */
+    padding: 0.2rem 2rem;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.btn4:hover {
+    background: #fff;
+    color: #f1bf29;
+}
+
+.slide4 .buy {
+    grid-column: 1;
+    grid-row: 3;
+    place-self: center;
+}
+.slide4 .sell {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+}
+.img-holder4 {
+    position: relative;
+    grid-row: span 3;
+    grid-column: 3 ;
+    display: grid;
+    align-self: start;
+    justify-self: end;
+    transform: translateY(-20px);
+
+}
+.slide4 #img1 {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    -webkit-box-reflect: left 190px  linear-gradient(transparent, #08041a52, #00000000);
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+}
+.slide-indicator {
+    position: absolute;
+    width: 100vw;
+    height: 3rem;
+    z-index: 32;
+    transform: translate(0px, 135px);
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+.indicator {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+}
+
+/* @media (max-width : 1500px) {
+    .slide1 #img1 {
+        width: 40rem;
+        height: 40rem;
+        transform: translate(-2rem)
+    }
+
+} */
