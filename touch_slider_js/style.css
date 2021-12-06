@@ -32,6 +32,7 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fit, 10rem) 1fr;
     grid-template-rows: repeat(auto-fit, 33%);
+    overflow: hidden;
 }
  .slide1 {
     background: linear-gradient(to right, #eec717, #f1faa1d3);
