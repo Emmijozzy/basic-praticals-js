@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Home Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="home-container">
+            <h2>Edit this paragraph below with the Setting given</h2>
+            <p class="content">I love creativity, this am proud of and I wish to contiue</p>
+        </div>
+        <div class="edictor">
+            <label for="font-color">Color <input type="color" name="font-color" id="font-color" value="#f76763" ></label>
+            <label for="background-color">Background Color <input type="color" name="background-color" id="background-color" value="#676555"></label>
+            <label for="font-size">Font-size <input type="range" name="font-size" id="font-size" min="10" max="50" data-size = "px"></label>
+            <label for="X-axis">X-axis <input type="range" name="X-axis" min="-20" max="200" id="X-axis" data-size="px"></label>
+            <label for="Y-axis">y-axis <input type="range" name="Y-axis" min="-200" max="200" id="Y-axis" data-size="px"></label>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,7 +1,8 @@
 const btn = document.querySelector('#btn');
 const qoute = document.querySelector('.inner-qoute');
 const author = document.querySelector('#author');
-// let quotes;
+let quotes = [];
+
 // XMIHttpRequest API
 function on_load(url, callback) {
     var xhttp = new XMLHttpRequest();
@@ -15,7 +16,7 @@ function on_load(url, callback) {
 }
 
 function loadout(xhttp){
-    quotes = JSON.parse(xhttp.response)
+    quotes.push(...JSON.parse(xhttp.response))
 }
 
 
@@ -23,14 +24,15 @@ function loadout(xhttp){
 // fetch('qoute.json')
 //     .then(response => response.json())
 //     .then(data => {
-//     quotes = data;
-//     return quotes;
+//         console.log(data)
+//         quotes.push(...data)
 // })
 
 // event listener
 btn.addEventListener('click', getQuote);
 
 function getQuote() {
+    console.log(quotes)
     let random = Math.floor(Math.random() * quotes.length);
     qoute.innerHTML = `${quotes[random].quote}`;
     author.innerHTML = `<span>--</span> ${quotes[random].author}`

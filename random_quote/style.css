@@ -3,6 +3,18 @@
     padding: 0;
     box-sizing: content-box;
 }
+/* .svg{
+    position: relative;
+    z-index: -456355;
+    width: 19%;
+    height: 2%;
+}
+.svg svg {
+    position: relative;
+    z-index: -456355;
+    width: 20%;
+    height: 2%;
+} */
 body {
     display: grid;
     place-items: center;
@@ -10,6 +22,7 @@ body {
     height: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background: #d7e7ff;
+
     /* overflow: hidden; */
 }
 .container {
@@ -24,14 +37,18 @@ body {
 .qoute-field {
     width: 70vw;
     height: 20rem;
-    background: #fff;
+    background:  #ffffff url(logo-triangular-tribal-shape.svg);
+    background-repeat: no-repeat;
+    background-position:bottom;
+    background-size:680px;
+    background-position-y: -50px;
     display: grid;
     grid-template-rows: 1fr auto auto;
     padding: 1rem  2rem;
     border-right: 10px solid #e93e93;
     border-left: 10px solid #e93e93;
     border-radius: 20px;
-    box-shadow: 1px 2px 10px #ccc;
+    box-shadow: 1px 2px 10px rgb(208, 177, 177);
     /* box-sizing: content-box; */
 }
 .qoute-field .inner-qoute {

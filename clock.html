@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS + CSS Clock</title>
+</head>
+<body>
+
+  <div class="clock-container">
+    <div class="clock-screen">
+      <div class="hands hour"></div>
+      <div class="hands minute"></div>
+      <div class="hands second"></div>
+      <span class="nums num12">12</span>
+      <span class="nums num9">9</span>
+      <span class="nums num6">6</span>
+      <span class="nums num3">3</span>
+    </div>
+  </div>
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #444;
+      width: 100%;
+      height : 100vh;
+      display: flex;
+      align-items : center;
+      justify-content: center;
+    }
+    .clock-container {
+      border: 2rem solid #fff;
+      width: 45rem;
+      height: 45rem;
+      border-radius: 50%;
+      position: relative;
+      box-shadow: inset 0px 0px 10px #fff, 0px 0px 10px rgba(255, 255, 255, 0.685) ;
+    }
+    .clock-screen {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .nums {
+      position: absolute;
+      font-size: 5rem;
+      color: #fff;
+      text-shadow: 0px 0px 10px #fff;
+      
+    }
+    .num12 {
+      left: 280px;
+      top: -15px;
+    }
+    .num9 {
+      top : 280px;
+    }
+    .num3 {
+      right: 0px;
+      top: 280px;
+    }
+    .num6 {
+      left: 300px;
+      bottom: -15px;
+    }
+    .hands {
+      text-shadow: 0px 0px 20px #fff;
+      width:45%;
+      height: 0.2rem;
+      background: #fff;
+      position: relative;
+      top: 320px;
+      left: 30px;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+  </style>
+
+  <script>
+     const hour = document.querySelector('.hour');
+     const min = document.querySelector('.minute');
+     const sec = document.querySelector('.second')
+
+     function setTime() {
+       const now = new Date();
+       const seconds = now.getSeconds();
+       const secondsDegrees = ((seconds / 60) * 360) + 90 // initial rotate degree
+       sec.style.transform = `rotate(${secondsDegrees}deg)`;
+
+       const  minutes = now.getMinutes();
+       const minutesDegrees = ((minutes / 60) * 360) + 90 // initial rotate degree
+       min.style.transform = `rotate(${minutesDegrees}deg)`;
+
+       const hours = now.getHours();
+       const hoursDegrees = ((hours / 60) * 360) + 90 // initial rotate degree
+       hour.style.transform = `rotate(${hoursDegrees}deg)`;
+     }
+     setInterval(setTime, 1000)
+  </script>
+</body>
+</html>

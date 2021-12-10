@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">    
+        <div class="form-container ">
+            <div class="form-header">
+                <h2>Type Ahead Form</h2>
+                <p>States and local government Areas in Nigeria</p>
+            </div>
+            <form >
+                <div class="input state">
+                    <label for="state">State</label>
+                    <input type="text" name="state" id="state" placeholder="Enter your state">
+                    <span class="arrow"></span>
+                </div>
+                <div class="sug-container state-loader">
+                    <ul class="suggestion state-sug">
+                        <li class="sug-state sug">State suggestions</li>
+
+
+                    </ul>
+                </div>
+                <div class="input lga">
+                    <label for="lga">LGA</label>
+                    <input type="text" name="lga" id="lga" placeholder="Enter your state">
+                    <span class="arrow"></span>
+                </div>
+                 <div class="sug-container lga-loader">
+                    <ul class="suggestion local-suggestion">
+
+                    </ul>
+                </div>
+                <div class= 'sumit-holder'>
+                    <input type="submit" value="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

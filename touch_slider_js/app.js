@@ -1,8 +1,3 @@
-/*
-  This JS is from the following project:
-  https://github.com/bushblade/Full-Screen-Touch-Slider
-*/
-
 const slider = document.querySelector('.slide-container'),
   slides = Array.from(document.querySelectorAll('.slide'))
 
@@ -45,9 +40,7 @@ function touchStart(index) {
     // console.log(startPos)
     animation()
 
-    // https://css-tricks.com/using-requestanimationframe/
     slider.classList.add('grabbing')
-
   }
 }
 
@@ -59,9 +52,9 @@ function touchEnd() {
   const movedBy = currentTranslate - prevTranslate
   // console.log("move", movedBy)
   
-  if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex ++
+  if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex += 1
   
-  if (movedBy > 100 && currentIndex > 0) currentIndex --
+  if (movedBy > 100 && currentIndex > 0) currentIndex -= 1
   
   setPositionByIndex()
   
@@ -71,7 +64,7 @@ function touchEnd() {
 function touchMove(event) {
   if (isDragging) {
     const currentPosition = getPositionX(event)
-
+    // console.log(currentPosition)
     currentTranslate = prevTranslate + currentPosition - startPos
   }
 }
@@ -81,8 +74,11 @@ function getPositionX(event) {
 }
 
 function animation() {
-  setSliderPosition()    
+  setSliderPosition()
+  console.log('woking anima')
+    
   if (isDragging) /*requestAnimationFrame(animation)*/animationID = requestAnimationFrame(animation)
+  // console.log('working')
 }
 
 function setSliderPosition() {
