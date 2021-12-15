@@ -260,7 +260,7 @@ main {
     color: var(--primary-clr);
     font-size: 2rem;
     transform: translateX(-80rem) scale(0.80);
-    transition: all 0.7s ease-out;
+    transition: all 1s ease-out;
     opacity: 0;
 }
 
