@@ -31,8 +31,8 @@ function loadIn(e){
 function slidesIn(e){
     console.count(e)
     portContainers.forEach(portContainer => {
-        const slidepoint = (window.scrollY + window.innerHeight) - 1100
-        const containerBottom = portContainer.offsetTop + 900
+        const slidepoint = (window.scrollY + window.innerHeight) - 900
+        const containerBottom = portContainer.offsetTop + 1050
         // console.log(containerBottom)
         const halfshown = slidepoint > portContainer.offsetTop
         const pased = window.scrollY < containerBottom
