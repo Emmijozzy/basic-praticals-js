@@ -6,15 +6,15 @@ countos.forEach(counto => {
     function startCount() {
         const target = +counto.dataset.target
         // console.log(target)
-        var startNum = +(counto.innerText); 
+        var currentNum = +(counto.innerText); 
         const inc = Math.ceil(target/speed)  
-        startNum += inc
-        counto.innerHTML = startNum
+        currentNum += inc
+        counto.innerHTML = currentNum
         setTimeout(() => {
-            if (startNum < target) {
+            if (currentNum < target) {
                 startCount()
             }
-        }, 1);
+        }, 2);
     
     }
     // counto.addEventListener('click', startCount);
