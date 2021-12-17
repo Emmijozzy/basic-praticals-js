@@ -106,6 +106,9 @@ body{
     align-items: center;
     padding-bottom: 1.1rem;
     padding-left: 10px;
+    border-radius: 10px ;
+    margin-top: 10px;
+    margin-right: 5px;
 }
 .list-container::-webkit-scrollbar {
     width: 4px;
