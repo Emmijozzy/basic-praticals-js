@@ -166,6 +166,7 @@ main {
     margin: 2rem;
     display: flex;
     place-items: center;
+    place-content: center;
     padding: 1rem;
     border-radius: 10px;
     opacity: 0.1;
@@ -177,7 +178,7 @@ main {
     opacity: 1;
 }
 .right img {
-    width: 100%;
+    width: 25rem;
     height: 80%;
 }
 
