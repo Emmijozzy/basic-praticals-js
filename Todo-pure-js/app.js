@@ -27,8 +27,8 @@ const todoValue = document.querySelector('[type = text]')
 const submit = document.querySelector('.todo-form')
 // console.log(listHolder)
 
-let todoList = /*JSON.parse(localStorage.getItem('todoList')) ||*/ typeof JSON.parse(localStorage.getItem('todoList')) !== 'object'? [] : JSON.parse(localStorage.getItem('todoList'))
-    todolist = todoList.length == undefined || todoList.length == null ? [] : todoList
+let todoList = JSON.parse(localStorage.getItem('todoList')) || [] //typeof JSON.parse(localStorage.getItem('todoList')) !== 'object'? [] : JSON.parse(localStorage.getItem('todoList'))
+    todolist = todoList ? todoList : []
 console.log( typeof JSON.parse(localStorage.getItem('todoList')))
 console.log(todoList)
 submit.addEventListener('submit', addTodo)
