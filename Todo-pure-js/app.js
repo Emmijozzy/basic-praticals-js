@@ -28,9 +28,22 @@ const submit = document.querySelector('.todo-form')
 // console.log(listHolder)
 
 let todoList = JSON.parse(localStorage.getItem('todoList')) || [] //typeof JSON.parse(localStorage.getItem('todoList')) !== 'object'? [] : JSON.parse(localStorage.getItem('todoList'))
-    todolist = todoList ? todoList : []
+    todoList = (function() {
+        if (typeof todoList == 'string') {
+           return todoList = []
+        } else {
+            return todoList = JSON.parse(localStorage.getItem('todoList')) 
+        }
+    })()
+    // console.log((function() {
+    //     if (typeof todolist !== 'string') {
+    //         return []
+    //     } else {
+    //         return todoList
+    //     }
+    // })())
 console.log( typeof JSON.parse(localStorage.getItem('todoList')))
-console.log(todoList)
+console.log(typeof todoList)
 submit.addEventListener('submit', addTodo)
 function addTodo(e){
     e.preventDefault()
@@ -50,7 +63,7 @@ function addTodo(e){
 
 function loadTodo(arrStore = [] , NodeElem) {
     NodeElem.innerHTML = arrStore.map((todo, i) => {
-        return `<li class="task${i}">
+        return `<li class="task${i} task">
                     <label for="task${i}">
                         <input type="checkbox" name="task${i}" id="task${i}" data-index = ${i} ${todo.done? 'checked': ''}>
                         <span class="task-des">${todo.inputedTodo}</span>
@@ -98,7 +111,7 @@ clearAll.onclick = () => {
 
 function addToTotal(){
  const total = document.querySelector('.total')    
-total.innerHTML = `Total ${todoList.length}`
+total.innerHTML = typeof todoList == 'string' ? `Total ${0}` : `Total ${todoList.length}`
 }
 addToTotal()
 

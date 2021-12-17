@@ -110,6 +110,9 @@ body{
     margin-top: 10px;
     margin-right: 5px;
 }
+.list-holder .task {
+    background: #fff;
+}
 .list-container::-webkit-scrollbar {
     width: 4px;
 }
@@ -138,7 +141,9 @@ label .task-des {
     flex: 22;
     /* width: 73vw; */
     padding-left: 1rem;
+    text-align: center;
 }
+
 label .func {
     position: relative;
     justify-self: end;
