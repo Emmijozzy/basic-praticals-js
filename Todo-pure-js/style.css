@@ -101,6 +101,11 @@ body{
     place-items: center;
     align-content: center;
     /* overflow-x: hidden; */
+    background: rgba(255, 255, 255, 0.398);
+    margin: 1px;
+    align-items: center;
+    padding-bottom: 1.1rem;
+    padding-left: 10px;
 }
 .list-container::-webkit-scrollbar {
     width: 4px;
@@ -143,24 +148,30 @@ label .func {
 }
 .func .edit {
     position: absolute;
-    left: -25px;
+    left: -60px;
     bottom: 0rem;
     opacity: 0;
     transform: scaleX(0);
     transition: all 0.5s ease-out;
     z-index: 22222;
-    font-size: 10px;
+    font-size: 13px;
+    background: #e310eb;
+    padding: 5px;
+    border-radius: 5px;
 }
 .func .delete {
     bottom: 0rem;
-    left : 0.2rem;
+    left : -20px;
     opacity: 0;
     position: absolute;
     /* display: none; */
     transform: scaleX(0);
     transition:  all 0.9s ease-out;
     z-index: 2222;
-    font-size: 10px;
+    font-size: 13px;
+    padding: 5px;
+    background: #e310eb;
+    border-radius: 5px;
 }
 .show-func .edit, .show-func .delete {
     transform: translateX(0);
