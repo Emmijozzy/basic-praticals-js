@@ -27,14 +27,20 @@ const todoValue = document.querySelector('[type = text]')
 const submit = document.querySelector('.todo-form')
 // console.log(listHolder)
 
-let todoList = JSON.parse(localStorage.getItem('todoList')) || [] //typeof JSON.parse(localStorage.getItem('todoList')) !== 'object'? [] : JSON.parse(localStorage.getItem('todoList'))
-    todoList = (function() {
-        if (typeof todoList == 'string') {
-           return todoList = []
+let todoList = !!JSON.parse(localStorage.getItem('todoList'))?  JSON.parse(localStorage.getItem('todoList'))  : [] ; //typeof JSON.parse(localStorage.getItem('todoList')) !== 'object'? [] : JSON.parse(localStorage.getItem('todoList'))
+console.log(todoList)  
+console.log(todoList.length)  
+console.log(typeof todoList)    
+todoList = (function() {
+    if (typeof todoList == 'string' && !!JSON.parse(localStorage.getItem('todoList')) ) {
+        return todoList = []
+        } else if (typeof todoList == 'object' && todoList.length == 0) {
+            return todoList = []
         } else {
             return todoList = JSON.parse(localStorage.getItem('todoList')) 
         }
     })()
+console.log(todoList)    
     // console.log((function() {
     //     if (typeof todolist !== 'string') {
     //         return []
@@ -42,8 +48,8 @@ let todoList = JSON.parse(localStorage.getItem('todoList')) || [] //typeof JSON.
     //         return todoList
     //     }
     // })())
-console.log( typeof JSON.parse(localStorage.getItem('todoList')))
-console.log(typeof todoList)
+console.log(!!JSON.parse(localStorage.getItem('todoList')))
+console.log(todoList)
 submit.addEventListener('submit', addTodo)
 function addTodo(e){
     e.preventDefault()
